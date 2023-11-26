@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="RECOMPILANDO JAR">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/FirebaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/biodigestor-382e3-firebase-adminsdk-5urmc-71fb6d5179.json" beforeDir="false" />
-    </list>
+    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="ajustando codigo para funcionar no heroku" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -126,7 +118,7 @@
       <workItem from="1700940717574" duration="11352000" />
       <workItem from="1701013838740" duration="5000" />
       <workItem from="1701013992828" duration="4497000" />
-      <workItem from="1701019640659" duration="322000" />
+      <workItem from="1701019640659" duration="731000" />
     </task>
     <task id="LOCAL-00001" summary="adicionando login e cadastro">
       <created>1700962685801</created>
@@ -184,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701010222355</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ajustando codigo para funcionar no heroku">
+      <created>1701020364924</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701020364924</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,7 +208,8 @@
     <MESSAGE value="corrigindo manifest" />
     <MESSAGE value="removendo o mongo do código e usando apenas o firebase" />
     <MESSAGE value="RECOMPILANDO JAR" />
-    <option name="LAST_COMMIT_MESSAGE" value="RECOMPILANDO JAR" />
+    <MESSAGE value="ajustando codigo para funcionar no heroku" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajustando codigo para funcionar no heroku" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
