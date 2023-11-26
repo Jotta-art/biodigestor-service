@@ -59,7 +59,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-client</artifactId>
         </dependency>
-
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-jwt</artifactId>
@@ -68,7 +67,7 @@
         <dependency>
             <groupId>com.google.firebase</groupId>
             <artifactId>firebase-admin</artifactId>
-            <version>8.1.0</version> <!-- Versão atualizada -->
+            <version>8.1.0</version>
         </dependency>
     </dependencies>
 
@@ -88,8 +87,6 @@
             </plugin>
         </plugins>
     </build>
-
-
 
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
