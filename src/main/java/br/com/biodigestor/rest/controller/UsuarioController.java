@@ -1,7 +1,6 @@
 package br.com.biodigestor.rest.controller;
 
 import br.com.biodigestor.model.Usuario;
-import br.com.biodigestor.service.FirebaseService;
 import br.com.biodigestor.service.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;

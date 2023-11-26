@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="corrigindo manifest">
+    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="RECOMPILANDO JAR">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Documento.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/repository/DocumentoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/repository/UsuarioRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/FirebaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/FirebaseConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/UsuarioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseServiceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseServiceHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/HomeService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/UsuarioService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/biodigestor-382e3-firebase-adminsdk-5urmc-71fb6d5179.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,37 +46,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/joaop/IdeaProjects/biodigestor-back_old",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/joaop/IdeaProjects/biodigestor-service/target&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;c196c1bc9f5cb79776147882b7d2fd33&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\target" />
       <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\src\main\java\br\com\biodigestor\rest\controller" />
       <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\src\main\resources" />
       <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\src\main\java\br\com\biodigestor" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\src\main\resources" />
+      <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service\target" />
       <recent name="C:\Users\joaop\IdeaProjects\biodigestor-service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -92,6 +90,9 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="mvn clean package" />
+      <command value="mvn deploy" />
+      <command value="mvn clean" />
+      <command value="mvn install" />
     </option>
   </component>
   <component name="RunManager">
@@ -117,12 +118,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="58aafd4a-7bc0-43a0-bfe2-7a2473d17c8e" name="Changes" comment="" />
+      <changelist id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="RECOMPILANDO JAR" />
       <created>1700940716402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700940716402</updated>
       <workItem from="1700940717574" duration="11352000" />
+      <workItem from="1701013838740" duration="5000" />
+      <workItem from="1701013992828" duration="4497000" />
+      <workItem from="1701019640659" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="adicionando login e cadastro">
       <created>1700962685801</created>
@@ -166,7 +170,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701007920522</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="removendo o mongo do código e usando apenas o firebase">
+      <created>1701009992110</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1701009992110</updated>
+    </task>
+    <task id="LOCAL-00008" summary="RECOMPILANDO JAR">
+      <created>1701010222355</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1701010222355</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,7 +207,9 @@
     <MESSAGE value="adicionando manifest java para subir na heroku" />
     <MESSAGE value="adicionando Procfile java para subir na heroku" />
     <MESSAGE value="corrigindo manifest" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrigindo manifest" />
+    <MESSAGE value="removendo o mongo do código e usando apenas o firebase" />
+    <MESSAGE value="RECOMPILANDO JAR" />
+    <option name="LAST_COMMIT_MESSAGE" value="RECOMPILANDO JAR" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
