@@ -1,17 +1,17 @@
-package br.com.biodigestor.form;
+package br.com.biodigestor.model;
 
-public class HomeForm {
-    private String nome;
+public class Device {
+    private String Id;
     private String data;
     private String pressao;
     private String vazao;
 
-    public String getNome() {
-        return nome;
+    public String getId() {
+        return Id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId(String id) {
+        Id = id;
     }
 
     public String getData() {
