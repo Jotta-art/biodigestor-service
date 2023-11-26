@@ -107,7 +107,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>br.com.biodigestor.BiodigestorServiceApplication.java</mainClass>
+                            <mainClass>br.com.biodigestor.BiodigestorServiceApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
