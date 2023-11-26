@@ -1,7 +1,8 @@
 package br.com.biodigestor.service;
 
 import br.com.biodigestor.model.Usuario;
-import br.com.biodigestor.repository.UsuarioRepository;
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,18 +10,39 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.validation.Valid;
+import java.util.concurrent.ExecutionException;
+
+import static java.util.Objects.isNull;
 
 @Service
 public class UsuarioService implements UserDetailsService {
+    private final FirebaseServiceHelper firebaseServiceHelper;
+
     @Autowired
-    private UsuarioRepository repository;
+    public UsuarioService(FirebaseServiceHelper firebaseServiceHelper) {
+        this.firebaseServiceHelper = firebaseServiceHelper;
+    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario usuario = repository.
-                findByUsername(username)
-                .orElseThrow(() -> new UsernameNotFoundException("Login não encontrado."));
+        CollectionReference usersCollection = firebaseServiceHelper.getusuariosCollection();
+
+        Query query = usersCollection.whereEqualTo("username", username);
+        ApiFuture<QuerySnapshot> querySnapshot = query.get();
+
+        Usuario usuario = null;
+
+        try {
+            for (DocumentSnapshot document : querySnapshot.get().getDocuments()) {
+                usuario = document.toObject(Usuario.class);
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+
+        if (isNull(usuario)) {
+            throw new UsernameNotFoundException("Login não encontrado.");
+        }
 
         return User
                 .builder()
@@ -30,12 +52,15 @@ public class UsuarioService implements UserDetailsService {
                 .build();
     }
 
-    public void salvar(@Valid Usuario usuario) {
-        boolean exists = repository.existsByUsername(usuario.getUsername());
+    public void salvarUsuario(Usuario usuario) throws ExecutionException, InterruptedException {
+        boolean exists = firebaseServiceHelper.existsByUsername(usuario.getUsername());
         if (exists) {
             throw new RuntimeException("Usuário já cadastrado");
         }
 
-        repository.save(usuario);
+        CollectionReference usuarios = firebaseServiceHelper.getusuariosCollection();
+
+        ApiFuture<DocumentReference> result = usuarios.add(usuario);
+        System.out.println("ID do Documento Criado: " + result.get().getId());
     }
 }

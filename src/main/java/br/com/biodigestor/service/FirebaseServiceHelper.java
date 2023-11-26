@@ -1,10 +1,11 @@
 package br.com.biodigestor.service;
 
-import com.google.cloud.firestore.CollectionReference;
-import com.google.cloud.firestore.DocumentReference;
-import com.google.cloud.firestore.Firestore;
+import com.google.api.core.ApiFuture;
+import com.google.cloud.firestore.*;
 import com.google.firebase.cloud.FirestoreClient;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.ExecutionException;
 
 @Service
 public class FirebaseServiceHelper {
@@ -18,8 +19,23 @@ public class FirebaseServiceHelper {
         return db.collection("devices");
     }
 
+    public CollectionReference getusuariosCollection() {
+        Firestore db = getFirestoreInstance();
+        return db.collection("usuarios");
+    }
+
     public DocumentReference getDeviceDocument(String deviceId) {
         CollectionReference devices = getDevicesCollection();
         return devices.document(deviceId);
+    }
+
+    public boolean existsByUsername(String username) throws ExecutionException, InterruptedException {
+        CollectionReference usersCollection = this.getusuariosCollection();
+
+        Query query = usersCollection.whereEqualTo("username", username).limit(1);
+        ApiFuture<QuerySnapshot> querySnapshot = query.get();
+
+        QuerySnapshot snapshot = querySnapshot.get();
+        return !snapshot.isEmpty();
     }
 }

@@ -2,9 +2,7 @@ package br.com.biodigestor.rest.controller;
 
 import br.com.biodigestor.form.HomeForm;
 import br.com.biodigestor.model.Device;
-import br.com.biodigestor.model.Documento;
 import br.com.biodigestor.service.FirebaseService;
-import br.com.biodigestor.service.HomeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,11 +13,7 @@ import java.util.concurrent.ExecutionException;
 @RequestMapping("/home")
 public class HomeController {
     @Autowired
-    private HomeService service;
-
-    @Autowired
     private FirebaseService firebaseService;
-
 
     @GetMapping
     public List<Device> listar() throws ExecutionException, InterruptedException {

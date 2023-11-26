@@ -2,6 +2,7 @@ package br.com.biodigestor.service;
 
 import br.com.biodigestor.form.HomeForm;
 import br.com.biodigestor.model.Device;
+import br.com.biodigestor.model.Usuario;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
 import org.springframework.beans.factory.annotation.Autowired;
