@@ -36,11 +36,11 @@ public class ApplicationControllerAdvice {
         return new ResponseEntity(apiErrors, codigoStatus);
     }
 
-    @ExceptionHandler(UsernameNotFoundException.class)
-    public ResponseEntity handleUsernameNotFoundException(UsernameNotFoundException ex){
-        String mensagemErro = ex.getReason();
-        HttpStatus codigoStatus = ex.getStatus();
-        ApiErrors apiErrors = new ApiErrors(mensagemErro);
-        return new ResponseEntity(apiErrors, codigoStatus);
-    }
+//    @ExceptionHandler(UsernameNotFoundException.class)
+//    public ResponseEntity handleUsernameNotFoundException(UsernameNotFoundException ex){
+//        String mensagemErro = ex.getReason();
+//        HttpStatus codigoStatus = ex.getStatus();
+//        ApiErrors apiErrors = new ApiErrors(mensagemErro);
+//        return new ResponseEntity(apiErrors, codigoStatus);
+//    }
 }
