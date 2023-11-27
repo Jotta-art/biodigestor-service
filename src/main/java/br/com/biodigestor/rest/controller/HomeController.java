@@ -22,7 +22,12 @@ public class HomeController {
 
     @GetMapping("{username}")
     public Usuario obterDadosUsuarioLogado(@PathVariable String username) throws ExecutionException, InterruptedException {
-        return this.firebaseService.obterEmailUsuarioLogado(username);
+        return this.firebaseService.obterDadosUsuarioLogado(username);
+    }
+
+    @PostMapping("foto-perfil")
+    public void salvarFotoPerfil(@RequestBody Usuario usuario) throws ExecutionException, InterruptedException {
+        this.firebaseService.salvarFotoPerfil(usuario);
     }
 
     @DeleteMapping("/{id}")

@@ -1,6 +1,7 @@
 package br.com.biodigestor.model;
 
 
+import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 public class Usuario {
@@ -12,6 +13,8 @@ public class Usuario {
 
     @NotEmpty(message = "A senha não pode estar vazia")
     private String password;
+
+    private String imagem;
 
     public String getUsername() {
         return username;
@@ -35,5 +38,13 @@ public class Usuario {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getImagem() {
+        return imagem;
+    }
+
+    public void setImagem(String imagem) {
+        this.imagem = imagem;
     }
 }

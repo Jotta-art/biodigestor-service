@@ -34,6 +34,11 @@ public class FirebaseServiceHelper {
         return devices.document(deviceId);
     }
 
+    public DocumentReference getUsuarioDocument(String usuarioId) {
+        CollectionReference usuarios = getusuariosCollection();
+        return usuarios.document(usuarioId);
+    }
+
     public boolean existsByUsername(String username) throws ExecutionException, InterruptedException {
         CollectionReference usersCollection = this.getusuariosCollection();
 

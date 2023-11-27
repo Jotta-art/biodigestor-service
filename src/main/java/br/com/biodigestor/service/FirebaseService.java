@@ -40,7 +40,7 @@ public class FirebaseService {
         System.out.println("ID do Documento Criado: " + result.get());
     }
 
-    public Usuario obterEmailUsuarioLogado(String username) {
+    public Usuario obterDadosUsuarioLogado(String username) {
         CollectionReference usersCollection = firebaseServiceHelper.getusuariosCollection();
 
         Query query = usersCollection.whereEqualTo("username", username);
@@ -61,6 +61,13 @@ public class FirebaseService {
         }
 
         return usuario;
+    }
+
+    public void salvarFotoPerfil(Usuario usuario) throws ExecutionException, InterruptedException {
+        DocumentReference usuarioDocument = firebaseServiceHelper.getUsuarioDocument(usuario.getUsername());
+
+        ApiFuture<WriteResult> result = usuarioDocument.set(usuario);
+        System.out.println("Resultado da atualização: " + result.get());
     }
 
     public void deletar(String deviceId) throws ExecutionException, InterruptedException {
