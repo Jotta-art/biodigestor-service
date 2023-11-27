@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="teste" />
+    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="teste 2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -120,7 +122,7 @@
       <workItem from="1701013838740" duration="5000" />
       <workItem from="1701013992828" duration="4497000" />
       <workItem from="1701019640659" duration="2250000" />
-      <workItem from="1701029423186" duration="9736000" />
+      <workItem from="1701029423186" duration="10762000" />
     </task>
     <task id="LOCAL-00001" summary="adicionando login e cadastro">
       <created>1700962685801</created>
@@ -213,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701055517301</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="teste 2">
+      <created>1701055660039</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1701055660039</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +251,8 @@
     <MESSAGE value="fodase" />
     <MESSAGE value="subindo" />
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="teste 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
