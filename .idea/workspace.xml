@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="fodase">
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/form/DadosForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Dado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/exception/UsernameNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/ApplicationControllerAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/ApplicationControllerAdvice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/rest/controller/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseServiceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/FirebaseServiceHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/UsuarioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/br/com/biodigestor/service/UsuarioService.java" afterDir="false" />
-    </list>
+    <list default="true" id="b3efdc0f-c8f8-44a9-8ed2-6c9b85a10f9e" name="Changes" comment="teste" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +120,7 @@
       <workItem from="1701013838740" duration="5000" />
       <workItem from="1701013992828" duration="4497000" />
       <workItem from="1701019640659" duration="2250000" />
-      <workItem from="1701029423186" duration="9059000" />
+      <workItem from="1701029423186" duration="9736000" />
     </task>
     <task id="LOCAL-00001" summary="adicionando login e cadastro">
       <created>1700962685801</created>
@@ -210,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701021125545</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="subindo">
+      <created>1701054888944</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701054888944</updated>
+    </task>
+    <task id="LOCAL-00013" summary="teste">
+      <created>1701055517301</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1701055517301</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,7 +240,9 @@
     <MESSAGE value="RECOMPILANDO JAR" />
     <MESSAGE value="ajustando codigo para funcionar no heroku" />
     <MESSAGE value="fodase" />
-    <option name="LAST_COMMIT_MESSAGE" value="fodase" />
+    <MESSAGE value="subindo" />
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
