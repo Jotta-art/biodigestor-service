@@ -1,17 +1,20 @@
 package br.com.biodigestor.service;
 
+import br.com.biodigestor.form.DadosForm;
 import br.com.biodigestor.form.HomeForm;
+import br.com.biodigestor.model.Dado;
 import br.com.biodigestor.model.Device;
 import br.com.biodigestor.model.Usuario;
 import com.google.api.core.ApiFuture;
 import com.google.cloud.firestore.*;
+import org.apache.http.client.utils.DateUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
+
+import static java.util.Objects.isNull;
 
 @Service
 public class FirebaseService {
@@ -22,38 +25,42 @@ public class FirebaseService {
         this.firebaseServiceHelper = firebaseServiceHelper;
     }
 
-    public List<Device> listar() throws ExecutionException, InterruptedException {
-        CollectionReference devices = firebaseServiceHelper.getDevicesCollection();
+    public void salvarDados(DadosForm form) throws ExecutionException, InterruptedException {
+        CollectionReference dados = firebaseServiceHelper.getDadosCollection();
 
-        List<Device> deviceList = new ArrayList<>();
+        Dado dado = new Dado();
+        dado.setData(DateUtils.formatDate(new Date(), "dd/MM/yyy"));
+        dado.setFluxoEntrada(form.isFluxoEntrada());
+        dado.setFluxoSaida(form.isFluxoSaida());
+        dado.setVazaoEntrada(form.getVazaoEntrada());
+        dado.setVazaoSaida(form.getVazaoSaida());
+        dado.setPressao(form.getPressao());
 
-        ApiFuture<QuerySnapshot> future = devices.get();
-        QuerySnapshot documents = future.get();
-
-        for (QueryDocumentSnapshot document : documents) {
-            Device device = document.toObject(Device.class);
-            device.setId(document.getId());
-            deviceList.add(device);
-        }
-
-//        devices.get().get().forEach(document -> {
-//            Device device = document.toObject(Device.class);
-//            deviceList.add(device);
-//        });
-
-        return deviceList;
+        ApiFuture<DocumentReference> result = dados.add(dado);
+        System.out.println("ID do Documento Criado: " + result.get());
     }
 
-    public void inserir(HomeForm form) throws ExecutionException, InterruptedException {
-        CollectionReference devices = firebaseServiceHelper.getDevicesCollection();
+    public Usuario obterEmailUsuarioLogado(String username) {
+        CollectionReference usersCollection = firebaseServiceHelper.getusuariosCollection();
 
-        Device device = new Device();
-        device.setData(String.valueOf(new Date()));
-        device.setPressao(form.getPressao());
-        device.setVazao(form.getVazao());
+        Query query = usersCollection.whereEqualTo("username", username);
+        ApiFuture<QuerySnapshot> querySnapshot = query.get();
 
-        ApiFuture<DocumentReference> result = devices.add(device);
-        System.out.println("ID do Documento Criado: " + result.get().getId());
+        Usuario usuario = null;
+
+        try {
+            for (DocumentSnapshot document : querySnapshot.get().getDocuments()) {
+                usuario = document.toObject(Usuario.class);
+            }
+        } catch (InterruptedException | ExecutionException e) {
+            throw new RuntimeException(e);
+        }
+
+        if (isNull(usuario)) {
+            throw new RuntimeException("Não foi possível recuperar o e-mail.");
+        }
+
+        return usuario;
     }
 
     public void deletar(String deviceId) throws ExecutionException, InterruptedException {

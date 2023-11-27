@@ -1,6 +1,7 @@
 package br.com.biodigestor.rest.controller;
 
 import br.com.biodigestor.rest.exception.ApiErrors;
+import br.com.biodigestor.rest.exception.UsernameNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -29,6 +30,14 @@ public class ApplicationControllerAdvice {
 
     @ExceptionHandler(ResponseStatusException.class)
     public ResponseEntity handleResponseStatusException(ResponseStatusException ex){
+        String mensagemErro = ex.getReason();
+        HttpStatus codigoStatus = ex.getStatus();
+        ApiErrors apiErrors = new ApiErrors(mensagemErro);
+        return new ResponseEntity(apiErrors, codigoStatus);
+    }
+
+    @ExceptionHandler(UsernameNotFoundException.class)
+    public ResponseEntity handleUsernameNotFoundException(UsernameNotFoundException ex){
         String mensagemErro = ex.getReason();
         HttpStatus codigoStatus = ex.getStatus();
         ApiErrors apiErrors = new ApiErrors(mensagemErro);

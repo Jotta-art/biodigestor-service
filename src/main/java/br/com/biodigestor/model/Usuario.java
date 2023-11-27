@@ -1,15 +1,14 @@
 package br.com.biodigestor.model;
 
 
-import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 public class Usuario {
-    @Id
-    private String id;
-
     @NotEmpty(message = "O nome de usuário não pode estar vazio")
     private String username;
+
+    @NotEmpty(message = "O email não pode estar vazio")
+    private String email;
 
     @NotEmpty(message = "A senha não pode estar vazia")
     private String password;
@@ -20,6 +19,14 @@ public class Usuario {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPassword() {

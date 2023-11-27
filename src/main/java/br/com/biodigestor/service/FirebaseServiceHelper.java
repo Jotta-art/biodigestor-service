@@ -24,6 +24,11 @@ public class FirebaseServiceHelper {
         return db.collection("usuarios");
     }
 
+    public CollectionReference getDadosCollection() {
+        Firestore db = getFirestoreInstance();
+        return db.collection("dados");
+    }
+
     public DocumentReference getDeviceDocument(String deviceId) {
         CollectionReference devices = getDevicesCollection();
         return devices.document(deviceId);
